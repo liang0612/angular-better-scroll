@@ -19,6 +19,9 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "@better-scroll/pull-down": "^2.0.0-beta.2",
+    "@better-scroll/pull-up": "^2.0.0-beta.2",
+    "better-scroll": "^2.0.0-beta.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

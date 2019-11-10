@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NbScrollComponent } from './nb-scroll/nb-scroll.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'next-scroll';
+  @ViewChild(NbScrollComponent, { static: false }) nbscroll: NbScrollComponent;
+  refresh() {
+    this.nbscroll.refresh();
+  }
 }

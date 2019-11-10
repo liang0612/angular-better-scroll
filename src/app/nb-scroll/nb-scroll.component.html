@@ -1,0 +1,28 @@
+<div class="list-wrapper" #scroll>
+    <div class="scroll-content">
+        <div #listWrapper>
+            <div class="list-content">
+                <div class="list-item" *ngFor="let item of list">这是第:{{item}}个元素</div>
+            </div>
+        </div>
+        <div class="pullup-wrapper">
+            <div *ngIf="!isPullUpLoad" class="before-trigger">
+                <span class="pullup-txt">上拉加载更多</span>
+            </div>
+            <div *ngIf="isPullUpLoad" class="after-trigger">
+                <img class="loading-icon" src="../../assets/images/loading.gif" />
+            </div>
+        </div>
+
+    </div>
+    <div class="pulldown-wrapper" [ngStyle]="{'top': pullDownStyle}" *ngIf="pullDownRefresh">
+        <div class="before-trigger" *ngIf="beforePullDown">
+            <app-bubble [y]="bubbleY"></app-bubble>
+        </div>
+        <div class="after-trigger" *ngIf="!beforePullDown">
+            <img *ngIf="isPullingDown" class="loading-icon" src="../../assets/images/loading.gif" />
+            <div *ngIf="!isPullingDown"><span>{{refreshTxt}}</span></div>
+        </div>
+    </div>
+    <!-- you can put some other DOMs here, it won't affect the scrolling-->
+</div>
